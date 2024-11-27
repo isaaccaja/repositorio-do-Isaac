@@ -1,0 +1,114 @@
+/* Reset básico */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Estilo do card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90vw; /* Usar a largura da tela para se ajustar bem em dispositivos móveis */
+  max-width: 350px; /* Limitar a largura máxima em telas grandes */
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito de zoom no card */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagem do produto */
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+/* Efeito de zoom na imagem */
+.product-image:hover {
+  transform: scale(1.1);
+}
+
+/* Título do produto */
+.product-title {
+  font-size: 1.5em;
+  color: #333;
+  margin: 16px 0 8px;
+  font-weight: bold;
+}
+
+/* Descrição do produto */
+.product-description {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* Botão de comprar */
+.buy-button {
+  padding: 10px 16px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%; /* Garantir que o botão ocupe toda a largura do card */
+}
+
+/* Efeito de pressionar o botão */
+.buy-button:active {
+  transform: scale(0.98);
+}
+
+/* Botão de comprar com hover */
+.buy-button:hover {
+  background-color: #218838;
+}
+
+/* Estilo para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+  /* Garantir que o card e o conteúdo se ajustem bem na tela do celular */
+  .card {
+      width: 90%; /* Card ocupa 90% da largura da tela */
+      padding: 12px; /* Menos padding em telas menores */
+  }
+
+  .product-title {
+      font-size: 1.3em; /* Tamanho do título menor em dispositivos móveis */
+  }
+
+  .buy-button {
+      padding: 12px; /* Aumentar o tamanho do botão em telas menores */
+      font-size: 1.1em; /* Aumentar a fonte do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para telas muito pequenas, como celulares antigos */
+  .product-title {
+      font-size: 1.2em;
+  }
+
+  .buy-button {
+      padding: 14px; /* Botão mais largo e fácil de clicar */
+      font-size: 1.2em;
+  }
+}
